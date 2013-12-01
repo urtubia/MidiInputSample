@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MidiInputSampleViewController.h"
 
 @implementation AppDelegate
 
@@ -14,7 +15,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    self.viewController = [[MidiInputSampleViewController alloc] initWithNibName:nil bundle:nil];
     self.window.backgroundColor = [UIColor whiteColor];
+    [self.window addSubview:self.viewController.view];
     [self.window makeKeyAndVisible];
     return YES;
 }
